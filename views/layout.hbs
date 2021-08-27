@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    {{{body}}}
+  </body>
+</html>
+<!-- This file contains the structure that we are using for the HTML pages. Going by the Handlebars syntax, we can see that {{title}}  appears within the HTML <title> tag. This means that when we call 'res.render, we should supply a 'title' attribute. The {{body}} tag is where the view template contents lands.
+  
+Files in the 'views' are templates into which data is rendered. they serve the view aspect of the Model-View-Controller (MVC) paradigm, hence the directory name. -->

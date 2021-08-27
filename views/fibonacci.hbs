@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+{{> navbar}}
+{{#if fiboval}}
+  <p>Fibonacci for {{fibonum}} is {{fiboval}}</p>
+  <hr/>
+{{/if}}
+<p>Enter a number to see its' Fibonacci number</p>
+<form name='fibonacci' action='/fibonacci' method='get'> <!--Because this is a 'GET' form, when the user clicks on the 'Submit' button, the brouser will issue an HTTP 'GET' mehtod to the '/fibonacci' URL. (See inside '/routes/fibonacci.js' module for further explanation.  ) -->
+<input type='text' name='fibonum' />
+<input type='submit' value='Submit' />
+</form>
+
+<!-- If 'fiboval' is set, this renders a message that for a given number (fibonum), we have calculated the corresponding Fibonacci number. There is also an HTML form that we can ender a 'fibonum' value. -->
+
+<!--
+  
+Files in the 'views' are templates into which data is rendered. they serve the view aspect of the Model-View-Controller (MVC) paradigm, hence the directory name. -->
